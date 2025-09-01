@@ -15,9 +15,9 @@ dependencies = [
     "tenacity==9.1.2",
     "aiolimiter==1.2.1",
 ]
-description = "aliyun open API"
+description = "Aliyun Python API kit"
 license = { text = "MIT" }
-name = "aliyun"
+name = "aliyun-kit"
 readme = "README.md"
 requires-python = ">=3.10, <4.0"
 version = "0.1.0"

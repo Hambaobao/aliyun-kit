@@ -23,7 +23,7 @@ class EcsInstance(EcsClient):
         region_id: str = "cn-shanghai",
         zone_id: str = "cn-shanghai-b",
         # optional parameters
-        resource_group_id: str = os.env.get("RESOURCE_GROUP_ID"),
+        resource_group_id: str = os.getenv("RESOURCE_GROUP_ID"),
         security_group_id: str = None,
         v_switch_id: str = None,
         internet_max_bandwidth_out: int = 100,

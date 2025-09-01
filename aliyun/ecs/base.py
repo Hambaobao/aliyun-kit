@@ -20,7 +20,7 @@ class EcsClient:
             self,
             region_id: str,
             zone_id: str = None,
-            resource_group_id: str = os.env.get("RESOURCE_GROUP_ID"),
+            resource_group_id: str = os.getenv("RESOURCE_GROUP_ID"),
             security_group_id: str = None,
             v_switch_id: str = None,
     ):

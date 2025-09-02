@@ -237,14 +237,13 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/23/18/35be17103c8f40f9eebec3b1567f51b3eec09c3a47a5dd62bcb413f4e619/alibabacloud_tea_util-0.3.13.tar.gz", hash = "sha256:8cbdfd2a03fbbf622f901439fa08643898290dd40e1d928347f6346e43f63c90", size = 6535, upload-time = "2024-07-15T12:25:12.07Z" }
 
 [[package]]
-name = "aliyun"
+name = "aliyun-kit"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "aiolimiter" },
     { name = "alibabacloud-cr20181201" },
     { name = "alibabacloud-ecs20140526" },
-    { name = "python-dotenv" },
     { name = "tenacity" },
 ]
 
@@ -253,7 +252,6 @@ requires-dist = [
     { name = "aiolimiter", specifier = "==1.2.1" },
     { name = "alibabacloud-cr20181201", specifier = "==2.0.1" },
     { name = "alibabacloud-ecs20140526", specifier = "==7.0.0" },
-    { name = "python-dotenv" },
     { name = "tenacity", specifier = "==9.1.2" },
 ]
 
@@ -782,15 +780,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/1d/b2/31537cf4b1ca988837256c910a668b553fceb8f069bedc4b1c826024b52c/pycparser-2.22.tar.gz", hash = "sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6", size = 172736, upload-time = "2024-03-30T13:22:22.564Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl", hash = "sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc", size = 117552, upload-time = "2024-03-30T13:22:20.476Z" },
-]
-
-[[package]]
-name = "python-dotenv"
-version = "1.1.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/f6/b0/4bc07ccd3572a2f9df7e6782f52b0c6c90dcbb803ac4a167702d7d0dfe1e/python_dotenv-1.1.1.tar.gz", hash = "sha256:a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab", size = 41978, upload-time = "2025-06-24T04:21:07.341Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/5f/ed/539768cf28c661b5b068d66d96a2f155c4971a5d55684a514c1a0e0dec2f/python_dotenv-1.1.1-py3-none-any.whl", hash = "sha256:31f23644fe2602f88ff55e1f5c79ba497e01224ee7737937930c448e4d0e24dc", size = 20556, upload-time = "2025-06-24T04:21:06.073Z" },
 ]
 
 [[package]]

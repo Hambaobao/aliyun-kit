@@ -87,7 +87,6 @@ repositories = await acr.list_repositories()
 
 ## Dependencies
 
-- **python-dotenv**: Environment variable management
 - **alibabacloud-ecs20140526**: Aliyun ECS API client
 - **alibabacloud-cr20181201**: Aliyun Container Registry API client
 - **tenacity**: Retry mechanism for API calls

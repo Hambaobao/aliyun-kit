@@ -1,9 +1,5 @@
 import os
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
 ZONE_ID_TO_V_SWITCH_ID = {
     "cn-shanghai-b": os.getenv("VSWITCH_ID_CN_SHANGHAI_B"),
     "cn-shanghai-e": os.getenv("VSWITCH_ID_CN_SHANGHAI_E"),

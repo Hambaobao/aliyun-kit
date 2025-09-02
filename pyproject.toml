@@ -9,7 +9,6 @@ include = ["aliyun*"]
 [project]
 authors = [{ name = "Lei Zhang", email = "jameszhang2880@gmail.com" }]
 dependencies = [
-    "python-dotenv",
     "alibabacloud-ecs20140526==7.0.0",
     "alibabacloud-cr20181201==2.0.1",
     "tenacity==9.1.2",

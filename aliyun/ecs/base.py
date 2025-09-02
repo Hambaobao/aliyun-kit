@@ -30,6 +30,10 @@ class EcsClient:
         self.security_group_id = security_group_id or REGION_ID_TO_SECURITY_GROUP_ID.get(region_id)
         self.v_switch_id = v_switch_id or ZONE_ID_TO_V_SWITCH_ID.get(zone_id)
 
+        assert self.resource_group_id, "RESOURCE_GROUP_ID is not set"
+        assert self.security_group_id, "SECURITY_GROUP_ID is not set"
+        assert self.v_switch_id, "V_SWITCH_ID is not set"
+
         self.client = self.create_client()
 
     def create_client(self) -> Ecs20140526Client:

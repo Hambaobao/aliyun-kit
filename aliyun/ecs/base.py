@@ -212,6 +212,7 @@ class EcsClient:
         command_id: str,
         invoke_id: str,
         region_id: str = None,
+        content_encoding: str = "PlainText",
     ) -> ecs_20140526_models.DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult | None:
         client = self.create_client()
         describe_invocation_results_request = ecs_20140526_models.DescribeInvocationResultsRequest(
@@ -220,14 +221,11 @@ class EcsClient:
             invoke_id=invoke_id,
             instance_id=instance_id,
             resource_group_id=self.resource_group_id,
+            content_encoding=content_encoding,
         )
         runtime = util_models.RuntimeOptions()
-        try:
-            response = await client.describe_invocation_results_with_options_async(describe_invocation_results_request, runtime)
-            return response.body.invocation.invocation_results.invocation_result[0] if response.status_code == 200 else None
-        except Exception as error:
-            print(error)
-            return None
+        response = await client.describe_invocation_results_with_options_async(describe_invocation_results_request, runtime)
+        return response.body.invocation.invocation_results.invocation_result[0]
 
     @retry_decorator()
     @rate_limit()

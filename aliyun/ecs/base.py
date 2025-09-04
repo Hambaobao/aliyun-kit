@@ -212,7 +212,7 @@ class EcsClient:
         command_id: str,
         invoke_id: str,
         region_id: str = None,
-    ) -> Dict[str, str] | None:
+    ) -> ecs_20140526_models.DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult | None:
         client = self.create_client()
         describe_invocation_results_request = ecs_20140526_models.DescribeInvocationResultsRequest(
             region_id=region_id or self.region_id,
@@ -224,7 +224,7 @@ class EcsClient:
         runtime = util_models.RuntimeOptions()
         try:
             response = await client.describe_invocation_results_with_options_async(describe_invocation_results_request, runtime)
-            return {"status": response.body.invocation.invocation_results.invocation_result[0].invocation_status} if response.status_code == 200 else None
+            return response.body.invocation.invocation_results.invocation_result[0] if response.status_code == 200 else None
         except Exception as error:
             print(error)
             return None

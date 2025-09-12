@@ -14,3 +14,7 @@ REGION_ID_TO_SECURITY_GROUP_ID = {
     "cn-hongkong": os.getenv("SECURITY_GROUP_ID_CN_HONGKONG"),
     "ap-southeast-1": os.getenv("SECURITY_GROUP_ID_AP_SOUTHEAST_1"),
 }
+
+IMAGES_MAP = {
+    "ubuntu-22.04": "ubuntu_22_04_x64_20G_alibase_20250324.vhd",
+}

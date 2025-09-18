@@ -361,3 +361,11 @@ class EcsClient:
         )
         runtime = util_models.RuntimeOptions()
         await self.client.stop_invocation_with_options_async(stop_invocation_request, runtime)
+
+    
+    async def reboot_ecs(self, instance_id: str):
+        reboot_instance_request = ecs_20140526_models.RebootInstanceRequest(
+            instance_id=instance_id
+        )
+        runtime = util_models.RuntimeOptions()
+        return await self.client.reboot_instance_with_options_async(reboot_instance_request, runtime)
